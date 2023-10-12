@@ -1,0 +1,31 @@
+:root{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    'nav header header header'
+    'nav main main main'
+    'nav main main main'
+    'nav main main main'
+    'nav main main main'
+    'nav main main main';
+    background-color: rgb(235, 234, 234);
+    min-height: 100vh;
+}
+
+header, main, nav{
+    border: 1px solid black;
+    
+}
+
+header{ grid-area: header;}
+main{ grid-area: main;}
+nav{ grid-area: nav;}
+    
+.nav-items > li{
+    list-style-type: none;
+    padding: 10px 0;
+}
+
