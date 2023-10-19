@@ -5,12 +5,8 @@
 body{
     display: grid;
     grid-template-areas:
-    'nav header header header'
-    'nav main main main'
-    'nav main main main'
-    'nav main main main'
-    'nav main main main'
-    'nav main main main';
+    'nav header'
+    'nav main';
     background-color: rgb(235, 234, 234);
     min-height: 100vh;
 }
@@ -25,11 +21,7 @@ nav{ grid-area: nav;}
 main{
     grid-area: main;
     display: grid;
-    grid-template-areas: 
-    'projects projects other'
-    'projects projects other'
-    'projects projects other'
-    'projects projects other';
+    grid-template-areas: 'projects other';
     padding: 10px;
     gap: 10px;
 }
@@ -41,13 +33,9 @@ main{
     padding: 5px;
     grid-template-areas: 
     'title title'
-    'project project'
-    'project project'
     'project project';
     grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-rows: 15px repeat(3, minmax(50px, 200px));
-    
-
+    grid-template-rows: 15px repeat(3, minmax(50px, auto));
 }
 
 .project, .announcements, .trending{
@@ -70,9 +58,9 @@ main{
     display: grid;
     gap: 10px 0;
     grid-template-areas: 
-    'title'
+    '.'
     'announcements'
-    'title'
+    '.'
     'trending';
     grid-template-rows: 15px auto 15px auto;
 }
