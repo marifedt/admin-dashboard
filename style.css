@@ -50,13 +50,16 @@ main{
 
 }
 
-.project{
+.project, .announcements, .trending{
     background-color: whitesmoke;
     border: 1px solid rgba(121, 119, 119, 0.3);
     border-radius: 5px;
+    box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.1);
+}
+
+.project{
     border-left-width: 5px;
     border-left-color: rgb(187, 84, 0); 
-    box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.1);
 }
 
 .projects > h2{
@@ -64,12 +67,14 @@ main{
 }
 .misc{
     grid-area: other;
-}
-.announcements{
-    grid-area: 1/2;
-}
-.trending{
-    grid-area: 2/3;
+    display: grid;
+    gap: 10px 0;
+    grid-template-areas: 
+    'title'
+    'announcements'
+    'title'
+    'trending';
+    grid-template-rows: 15px auto 15px auto;
 }
 
 .nav-items > li{
