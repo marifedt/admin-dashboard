@@ -70,3 +70,18 @@ main{
     padding: 10px 0;
 }
 
+.trending{
+    grid-area: trending;
+    display: grid;
+    justify-content: center;
+    padding: 20px 10px;
+    grid-area: auto;
+    grid-template-columns: minmax(200px, 250px);
+}
+
+.account{
+    display: grid;
+    grid-template-columns: 48px auto;
+    gap: 10px;
+    align-items: center;
+}
