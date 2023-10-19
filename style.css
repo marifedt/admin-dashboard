@@ -13,15 +13,13 @@ body{
     grid-template-rows: 150px auto;
 }
 
-header, main, nav{
-    border: 1px solid black;
-}
-
 header{ 
+    background-color: #faf4d3;
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 100px;
+    box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.1);
 }
 
 /* First row of Header */
@@ -39,10 +37,18 @@ header > div:first-child div:first-child{
     padding: 0 20px;
 }
 
+#search{
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(204, 201, 201);
+    outline: none;
+    padding: 5px 10px;
+}
+
 /* Profile info beside search bar */
 header > div:first-child div:last-child{
     display: grid;
-    grid-template-columns: auto auto 0.6fr;
+    grid-template-columns: auto auto 0.7fr;
     align-items: center;
     justify-content: end;
     gap: 10px;
@@ -90,6 +96,7 @@ header > div:last-child div:first-child > h2{
     grid-area: h2;
 }
 
+
 nav{ 
     grid-area: nav;
     display: grid;
@@ -97,6 +104,8 @@ nav{
     padding: 20px;
     grid-template-rows: 30px 70% auto;
     gap: 50px 0;
+    background-color: #004643;
+    color: white;
 }
 
 nav h2{
@@ -109,7 +118,6 @@ nav h2{
 .nav-items > li{
     list-style-type: none;
 }
-
 
 main{
     grid-area: main;
@@ -140,7 +148,7 @@ main{
 
 .project{
     border-left-width: 5px;
-    border-left-color: rgb(187, 84, 0); 
+    border-left-color: #785964; 
 }
 
 .projects > h2{
@@ -196,4 +204,24 @@ main{
     grid-template-columns: 48px auto;
     gap: 10px;
     align-items: center;
+}
+
+.avatar{
+    background-color: #9A8C98;
+    border-radius: 50px;
+}
+
+.btn{
+    color: white;
+    background-color: #004643;
+    padding: 10px 12px;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3 ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #01645f;
+    box-shadow: 1px 1px 7px 2px rgba(0,0,0,0.2);
+    transform: scale(1.1);
 }
