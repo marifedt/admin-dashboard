@@ -136,7 +136,7 @@ main{
     'title title'
     'project project';
     grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-rows: 15px repeat(3, minmax(50px, auto));
+    grid-template-rows: 15px repeat(3, minmax(50px, 200px));
 }
 
 .project, .announcements, .trending{
@@ -148,12 +148,42 @@ main{
 
 .project{
     border-left-width: 5px;
-    border-left-color: #785964; 
+    border-left-color: #785964;
+    display: grid;
+    grid-template-areas: 'desc'
+                         'buttons'; 
+    padding: 25px 25px 0 25px;
+}
+
+.proj-desc{
+    grid-area: desc;
+}
+
+.proj-desc p{
+    width: 85%;
+    max-height: 80px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(99, 96, 96);
+}
+.proj-buttons{
+    grid-area: buttons;
+    display: grid;
+    gap: 0 10px;
+    grid-template-columns: repeat(3, 20px);
+    grid-template-rows: 30px;
+    justify-content: end;
+    justify-items: center;
+    align-items: end;
 }
 
 .projects > h2{
     grid-area: title;
 }
+
 .misc{
     grid-area: other;
     display: grid;
