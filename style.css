@@ -58,11 +58,11 @@ header > div:first-child div:first-child{
 /* Profile info beside search bar */
 header > div:first-child div:last-child{
     display: grid;
-    grid-template-columns: 40px 40px 20%;
+    grid-template-columns: 40px 40px auto;
     align-items: center;
     justify-content: end;
     gap: 20px;
-    padding-right: 5px;
+    padding-right: 20px;
 }
 
 /* Second row of Header */
